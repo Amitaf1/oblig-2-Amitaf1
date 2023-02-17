@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    height: 150vh;
+    height: 120vh;
 }
 
 .navbar{
@@ -106,7 +106,7 @@ body{
 }
 
 .featured-content{
-    height: 50vh;
+    height: 120vh;
     background-color: #E90064;
 }
 
@@ -114,9 +114,8 @@ body{
 .form-container{
     width: 90%;
     max-width: 450px;
-    max-height: 450px;
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #060047;
@@ -164,3 +163,8 @@ input{
     color: #FAFAFA;
 }
 
+.error {
+    font-size: 18px;
+    color: crimson;
+    padding: 12px;
+}

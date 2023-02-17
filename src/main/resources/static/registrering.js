@@ -33,6 +33,7 @@ function saveInput() {
         if (errMsg === null) {
             errMsg = document.createElement("span");
             errMsg.id = "filmError";
+            errMsg.classList.add("error");
         }
         errMsg.textContent = text;
         ticket.film.after(errMsg);
@@ -53,6 +54,7 @@ function saveInput() {
         if (errMsg === null) {
             errMsg = document.createElement("span");
             errMsg.id = "amountError";
+            errMsg.classList.add("error");
         }
         errMsg.textContent = text;
         ticket.amount.after(errMsg);
@@ -72,6 +74,7 @@ function saveInput() {
         if (errMsg === null) {
             errMsg = document.createElement("span");
             errMsg.id = "fnameError";
+            errMsg.classList.add("error");
         }
         errMsg.textContent = text;
         ticket.fname.after(errMsg);
@@ -87,18 +90,19 @@ function saveInput() {
         const text = ticket.lname.value === "" || ticket.lname.value === null
             ? "Du må fylle feltet ut"
             : "Ugyldig etternavn!";
-        let lnameErr = document.getElementById("lnameError");
-        if (lnameErr === null) {
-            lnameErr = document.createElement("span");
-            lnameErr.id = "lnameError";
+        let errMsg = document.getElementById("lnameError");
+        if (errMsg === null) {
+            errMsg = document.createElement("span");
+            errMsg.id = "lnameError";
+            errMsg.classList.add("error");
         }
-        lnameErr.textContent = text;
-        ticket.lname.after(lnameErr);
+        errMsg.textContent = text;
+        ticket.lname.after(errMsg);
         error = true;
     } else {
-        const lnameErr = document.getElementById("lnameError");
-        if (lnameErr !== null && lnameErr.parentNode) {
-            lnameErr.parentNode.removeChild(lnameErr);
+        const errMsg = document.getElementById("lnameError");
+        if (errMsg !== null && errMsg.parentNode) {
+            errMsg.parentNode.removeChild(errMsg);
         }
     }
 
@@ -110,6 +114,7 @@ function saveInput() {
         if (errMsg === null) {
             errMsg = document.createElement("span");
             errMsg.id = "telnrError";
+            errMsg.classList.add("error");
         }
         errMsg.textContent = text;
         ticket.telnr.after(errMsg);
@@ -129,6 +134,7 @@ function saveInput() {
         if (errMsg === null) {
             errMsg = document.createElement("span");
             errMsg.id = "emailError";
+            errMsg.classList.add("error");
         }
         errMsg.textContent = text;
         ticket.email.after(errMsg);
