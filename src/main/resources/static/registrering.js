@@ -17,10 +17,14 @@ function saveInput() {
         emailPattern  = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     let error = false;
 
-    if (ticket.film.value !== "Volvo" &&
-        ticket.film.value !== "Saab" &&
-        ticket.film.value !== "Mercedes" &&
-        ticket.film.value !== "Audi"
+    if (ticket.film.value !== "Ant-Man and the Wasp: Quantumania" &&
+        ticket.film.value !== "Folk og røvere i Kardemommeby" &&
+        ticket.film.value !== "Puss in Boots: The Last Wish" &&
+        ticket.film.value !== "John Wick: Chapter 4" &&
+        ticket.film.value !== "The Little Mermaid (2023)" &&
+        ticket.film.value !== "Cocaine Bear" &&
+        ticket.film.value !== "Sword Art Online Progressive: Scherzo of Deep Night" &&
+        ticket.film.value !== "Creed III"
     ) {
         const text = ticket.film.value === "" || ticket.film.value === null
             ? "Du må velge noe"
